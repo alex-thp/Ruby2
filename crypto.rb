@@ -10,13 +10,13 @@ hash = tab.zip(tab3)
 i = hash.max_by{|num, valeur| valeur}
 
 puts "La réponse à la question 1 est : #{i}"
-
+puts "\n\n\n"
 j = hash.min_by {|num, valeur| valeur}
 puts "La réponse à la question 2 est : #{j}"
-
+puts "\n\n\n"
 k = tab.grep(/coin/i).length
 puts "La réponse à la question 3 est : #{k}"
-
+puts "\n\n\n"
 j = tab.length
 i = 0
 k = 0
@@ -29,7 +29,7 @@ i = i + 1
 end
 puts "Nombre total de devises : #{j}"
 puts "Nombre total de devises dont le cours est inferieur à 6000 : #{k}"
-
-puts "La réponse à la question 4 est : #{hash.select{|k,v| v <= 6000}}"
-
+puts "\n\n\n"
+puts "Seconde façon de résoudre la question 4 est : #{hash.select{|k,v| v <= 6000}}"
+puts "\n\n\n"
 puts "La réponse à la question 5 : #{hash.select{|k,v| v <= 6000}.max_by{|k,v| v}}"
