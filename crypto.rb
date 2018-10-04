@@ -17,4 +17,19 @@ puts "La réponse à la question 2 est : #{j}"
 k = tab.grep(/coin/i).length
 puts "La réponse à la question 3 est : #{k}"
 
+j = tab.length
+i = 0
+k = 0
+while (i < j)
+	if (hash[i][1] < 6000)
+	puts "#{hash[i][0]}"
+	k = k + 1
+	end
+i = i + 1
+end
+puts "Nombre total de devises : #{j}"
+puts "Nombre total de devises dont le cours est inferieur à 6000 : #{k}"
 
+puts "La réponse à la question 4 est : #{hash.select{|k,v| v <= 6000}}"
+
+puts "La réponse à la question 5 : #{hash.select{|k,v| v <= 6000}.max_by{|k,v| v}}"
